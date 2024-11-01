@@ -32,15 +32,15 @@ import (
 	"golang.org/x/term"
 	"sigs.k8s.io/yaml"
 
-	"helm.sh/helm/v3/cmd/helm/require"
-	"helm.sh/helm/v3/pkg/getter"
-	"helm.sh/helm/v3/pkg/repo"
+	"github.com/ruijzhan/helm/v3/cmd/helm/require"
+	"github.com/ruijzhan/helm/v3/pkg/getter"
+	"github.com/ruijzhan/helm/v3/pkg/repo"
 )
 
 // Repositories that have been permanently deleted and no longer work
 var deprecatedRepos = map[string]string{
-	"//kubernetes-charts.storage.googleapis.com":           "https://charts.helm.sh/stable",
-	"//kubernetes-charts-incubator.storage.googleapis.com": "https://charts.helm.sh/incubator",
+	"//kubernetes-charts.storage.googleapis.com":           "https://charts.github.com/ruijzhan/stable",
+	"//kubernetes-charts-incubator.storage.googleapis.com": "https://charts.github.com/ruijzhan/incubator",
 }
 
 type repoAddOptions struct {

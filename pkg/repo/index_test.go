@@ -27,10 +27,10 @@ import (
 	"strings"
 	"testing"
 
-	"helm.sh/helm/v3/pkg/chart"
-	"helm.sh/helm/v3/pkg/cli"
-	"helm.sh/helm/v3/pkg/getter"
-	"helm.sh/helm/v3/pkg/helmpath"
+	"github.com/ruijzhan/helm/v3/pkg/chart"
+	"github.com/ruijzhan/helm/v3/pkg/cli"
+	"github.com/ruijzhan/helm/v3/pkg/getter"
+	"github.com/ruijzhan/helm/v3/pkg/helmpath"
 )
 
 const (
@@ -44,7 +44,7 @@ apiVersion: v1
 entries:
   nginx:
     - urls:
-        - https://charts.helm.sh/stable/nginx-0.2.0.tgz
+        - https://charts.github.com/ruijzhan/stable/nginx-0.2.0.tgz
       name: nginx
       description: string
       version: 0.2.0
@@ -52,7 +52,7 @@ entries:
       digest: "sha256:1234567890abcdef"
   nginx:
     - urls:
-        - https://charts.helm.sh/stable/alpine-1.0.0.tgz
+        - https://charts.github.com/ruijzhan/stable/alpine-1.0.0.tgz
         - http://storage2.googleapis.com/kubernetes-charts/alpine-1.0.0.tgz
       name: alpine
       description: string
@@ -183,8 +183,8 @@ func TestLoadIndexFileAnnotations(t *testing.T) {
 	if len(i.Annotations) != 1 {
 		t.Fatalf("Expected 1 annotation but got %d", len(i.Annotations))
 	}
-	if i.Annotations["helm.sh/test"] != "foo bar" {
-		t.Error("Did not get expected value for helm.sh/test annotation")
+	if i.Annotations["github.com/ruijzhan/test"] != "foo bar" {
+		t.Error("Did not get expected value for github.com/ruijzhan/test annotation")
 	}
 }
 
@@ -365,7 +365,7 @@ func verifyLocalIndex(t *testing.T, i *IndexFile) {
 				Home:        "https://github.com/something",
 			},
 			URLs: []string{
-				"https://charts.helm.sh/stable/alpine-1.0.0.tgz",
+				"https://charts.github.com/ruijzhan/stable/alpine-1.0.0.tgz",
 				"http://storage2.googleapis.com/kubernetes-charts/alpine-1.0.0.tgz",
 			},
 			Digest: "sha256:1234567890abcdef",
@@ -380,7 +380,7 @@ func verifyLocalIndex(t *testing.T, i *IndexFile) {
 				Home:        "https://github.com/something/else",
 			},
 			URLs: []string{
-				"https://charts.helm.sh/stable/nginx-0.2.0.tgz",
+				"https://charts.github.com/ruijzhan/stable/nginx-0.2.0.tgz",
 			},
 			Digest: "sha256:1234567890abcdef",
 		},
@@ -394,7 +394,7 @@ func verifyLocalIndex(t *testing.T, i *IndexFile) {
 				Home:        "https://github.com/something",
 			},
 			URLs: []string{
-				"https://charts.helm.sh/stable/nginx-0.1.0.tgz",
+				"https://charts.github.com/ruijzhan/stable/nginx-0.1.0.tgz",
 			},
 			Digest: "sha256:1234567890abcdef",
 		},

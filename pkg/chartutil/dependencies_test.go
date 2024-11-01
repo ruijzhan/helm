@@ -21,8 +21,8 @@ import (
 	"strconv"
 	"testing"
 
-	"helm.sh/helm/v3/pkg/chart"
-	"helm.sh/helm/v3/pkg/chart/loader"
+	"github.com/ruijzhan/helm/v3/pkg/chart"
+	"github.com/ruijzhan/helm/v3/pkg/chart/loader"
 )
 
 func loadChart(t *testing.T, path string) *chart.Chart {

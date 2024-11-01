@@ -25,7 +25,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/cli-runtime/pkg/resource"
 
-	"helm.sh/helm/v3/pkg/kube"
+	"github.com/ruijzhan/helm/v3/pkg/kube"
 )
 
 var accessor = meta.NewAccessor()
@@ -33,8 +33,8 @@ var accessor = meta.NewAccessor()
 const (
 	appManagedByLabel              = "app.kubernetes.io/managed-by"
 	appManagedByHelm               = "Helm"
-	helmReleaseNameAnnotation      = "meta.helm.sh/release-name"
-	helmReleaseNamespaceAnnotation = "meta.helm.sh/release-namespace"
+	helmReleaseNameAnnotation      = "meta.github.com/ruijzhan/release-name"
+	helmReleaseNamespaceAnnotation = "meta.github.com/ruijzhan/release-namespace"
 )
 
 func existingResourceConflict(resources kube.ResourceList, releaseName, releaseNamespace string) (kube.ResourceList, error) {

@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"helm.sh/helm/v3/pkg/getter"
+	"github.com/ruijzhan/helm/v3/pkg/getter"
 )
 
 func TestMergeValues(t *testing.T) {

@@ -5,7 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+	http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,14 +22,14 @@ import (
 
 	fakeclientset "k8s.io/client-go/kubernetes/fake"
 
-	"helm.sh/helm/v3/pkg/chart"
-	"helm.sh/helm/v3/pkg/chartutil"
-	kubefake "helm.sh/helm/v3/pkg/kube/fake"
-	"helm.sh/helm/v3/pkg/registry"
-	"helm.sh/helm/v3/pkg/release"
-	"helm.sh/helm/v3/pkg/storage"
-	"helm.sh/helm/v3/pkg/storage/driver"
-	"helm.sh/helm/v3/pkg/time"
+	"github.com/ruijzhan/helm/v3/pkg/chart"
+	"github.com/ruijzhan/helm/v3/pkg/chartutil"
+	kubefake "github.com/ruijzhan/helm/v3/pkg/kube/fake"
+	"github.com/ruijzhan/helm/v3/pkg/registry"
+	"github.com/ruijzhan/helm/v3/pkg/release"
+	"github.com/ruijzhan/helm/v3/pkg/storage"
+	"github.com/ruijzhan/helm/v3/pkg/storage/driver"
+	"github.com/ruijzhan/helm/v3/pkg/time"
 )
 
 var verbose = flag.Bool("test.log", false, "enable test logging")
@@ -60,7 +60,7 @@ var manifestWithHook = `kind: ConfigMap
 metadata:
   name: test-cm
   annotations:
-    "helm.sh/hook": post-install,pre-delete,post-upgrade
+    "github.com/ruijzhan/hook": post-install,pre-delete,post-upgrade
 data:
   name: value`
 
@@ -68,7 +68,7 @@ var manifestWithTestHook = `kind: Pod
   metadata:
 	name: finding-nemo,
 	annotations:
-	  "helm.sh/hook": test
+	  "github.com/ruijzhan/hook": test
   spec:
 	containers:
 	- name: nemo-test

@@ -27,15 +27,15 @@ import (
 	"sort"
 	"strings"
 
-	"helm.sh/helm/v3/pkg/release"
+	"github.com/ruijzhan/helm/v3/pkg/release"
 
 	"github.com/spf13/cobra"
 
-	"helm.sh/helm/v3/cmd/helm/require"
-	"helm.sh/helm/v3/pkg/action"
-	"helm.sh/helm/v3/pkg/chartutil"
-	"helm.sh/helm/v3/pkg/cli/values"
-	"helm.sh/helm/v3/pkg/releaseutil"
+	"github.com/ruijzhan/helm/v3/cmd/helm/require"
+	"github.com/ruijzhan/helm/v3/pkg/action"
+	"github.com/ruijzhan/helm/v3/pkg/chartutil"
+	"github.com/ruijzhan/helm/v3/pkg/cli/values"
+	"github.com/ruijzhan/helm/v3/pkg/releaseutil"
 )
 
 const templateDesc = `

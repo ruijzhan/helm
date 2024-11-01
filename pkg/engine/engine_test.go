@@ -22,8 +22,8 @@ import (
 	"sync"
 	"testing"
 
-	"helm.sh/helm/v3/pkg/chart"
-	"helm.sh/helm/v3/pkg/chartutil"
+	"github.com/ruijzhan/helm/v3/pkg/chart"
+	"github.com/ruijzhan/helm/v3/pkg/chartutil"
 )
 
 func TestSortTemplates(t *testing.T) {

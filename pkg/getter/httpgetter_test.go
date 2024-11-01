@@ -30,9 +30,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"helm.sh/helm/v3/internal/tlsutil"
-	"helm.sh/helm/v3/internal/version"
-	"helm.sh/helm/v3/pkg/cli"
+	"github.com/ruijzhan/helm/v3/internal/tlsutil"
+	"github.com/ruijzhan/helm/v3/internal/version"
+	"github.com/ruijzhan/helm/v3/pkg/cli"
 )
 
 func TestHTTPGetter(t *testing.T) {
@@ -292,7 +292,7 @@ func TestDownloadTLS(t *testing.T) {
 		t.Fatal(errors.Wrap(err, "can't create TLS config for client"))
 	}
 	tlsConf.BuildNameToCertificate()
-	tlsConf.ServerName = "helm.sh"
+	tlsConf.ServerName = "github.com/ruijzhan"
 	tlsSrv.TLS = tlsConf
 	tlsSrv.StartTLS()
 	defer tlsSrv.Close()

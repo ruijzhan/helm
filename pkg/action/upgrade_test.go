@@ -22,14 +22,14 @@ import (
 	"testing"
 	"time"
 
-	"helm.sh/helm/v3/pkg/chart"
+	"github.com/ruijzhan/helm/v3/pkg/chart"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	kubefake "helm.sh/helm/v3/pkg/kube/fake"
-	"helm.sh/helm/v3/pkg/release"
-	helmtime "helm.sh/helm/v3/pkg/time"
+	kubefake "github.com/ruijzhan/helm/v3/pkg/kube/fake"
+	"github.com/ruijzhan/helm/v3/pkg/release"
+	helmtime "github.com/ruijzhan/helm/v3/pkg/time"
 )
 
 func upgradeAction(t *testing.T) *Upgrade {

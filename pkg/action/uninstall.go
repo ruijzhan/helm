@@ -22,11 +22,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"helm.sh/helm/v3/pkg/chartutil"
-	"helm.sh/helm/v3/pkg/kube"
-	"helm.sh/helm/v3/pkg/release"
-	"helm.sh/helm/v3/pkg/releaseutil"
-	helmtime "helm.sh/helm/v3/pkg/time"
+	"github.com/ruijzhan/helm/v3/pkg/chartutil"
+	"github.com/ruijzhan/helm/v3/pkg/kube"
+	"github.com/ruijzhan/helm/v3/pkg/release"
+	"github.com/ruijzhan/helm/v3/pkg/releaseutil"
+	helmtime "github.com/ruijzhan/helm/v3/pkg/time"
 )
 
 // Uninstall is the action for uninstalling releases.
