@@ -232,7 +232,7 @@ func newSecretsObject(key string, rls *rspb.Release, lbs labels) (*v1.Secret, er
 	// in the Kubernetes storage object.
 	// Helm defines the field content as follows:
 	// <helm_domain>/<helm_object>.v<helm_object_version>
-	// Type field for Helm 3: github.com/ruijzhan/release.v1
+	// Type field for Helm 3: helm.sh/release.v1
 	// Note: Version starts at 'v1' for Helm 3 and
 	// should be incremented if the release object
 	// metadata is modified.
@@ -243,7 +243,7 @@ func newSecretsObject(key string, rls *rspb.Release, lbs labels) (*v1.Secret, er
 			Name:   key,
 			Labels: lbs.toMap(),
 		},
-		Type: "github.com/ruijzhan/release.v1",
+		Type: "helm.sh/release.v1",
 		Data: map[string][]byte{"release": []byte(s)},
 	}, nil
 }

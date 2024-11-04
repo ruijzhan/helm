@@ -48,7 +48,7 @@ func TestUninstallRelease_deleteRelease(t *testing.T) {
 		"metadata": {
 		  "name": "secret",
 		  "annotations": {
-			"github.com/ruijzhan/resource-policy": "keep"
+			"helm.sh/resource-policy": "keep"
 		  }
 		},
 		"type": "Opaque",

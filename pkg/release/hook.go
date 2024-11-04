@@ -51,13 +51,13 @@ const (
 func (x HookDeletePolicy) String() string { return string(x) }
 
 // HookAnnotation is the label name for a hook
-const HookAnnotation = "github.com/ruijzhan/hook"
+const HookAnnotation = "helm.sh/hook"
 
 // HookWeightAnnotation is the label name for a hook weight
-const HookWeightAnnotation = "github.com/ruijzhan/hook-weight"
+const HookWeightAnnotation = "helm.sh/hook-weight"
 
 // HookDeleteAnnotation is the label name for the delete policy for a hook
-const HookDeleteAnnotation = "github.com/ruijzhan/hook-delete-policy"
+const HookDeleteAnnotation = "helm.sh/hook-delete-policy"
 
 // Hook defines a hook object.
 type Hook struct {

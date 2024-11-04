@@ -47,7 +47,7 @@ metadata:
   labels:
     doesnot: matter
   annotations:
-    "github.com/ruijzhan/hook": pre-install
+    "helm.sh/hook": pre-install
 `,
 		},
 		{
@@ -60,7 +60,7 @@ apiVersion: v1beta1
 metadata:
   name: second
   annotations:
-    "github.com/ruijzhan/hook": post-install
+    "helm.sh/hook": post-install
 `,
 		}, {
 			name:  []string{"third"},
@@ -72,7 +72,7 @@ apiVersion: v1beta1
 metadata:
   name: third
   annotations:
-    "github.com/ruijzhan/hook": no-such-hook
+    "helm.sh/hook": no-such-hook
 `,
 		}, {
 			name:  []string{"fourth"},
@@ -95,7 +95,7 @@ apiVersion: v1beta1
 metadata:
   name: fifth
   annotations:
-    "github.com/ruijzhan/hook": post-delete, post-install
+    "helm.sh/hook": post-delete, post-install
 `,
 		}, {
 			// Regression test: files with an underscore in the base name should be skipped.
@@ -129,7 +129,7 @@ kind: Pod
 metadata:
   name: example-test
   annotations:
-    "github.com/ruijzhan/hook": test
+    "helm.sh/hook": test
 `,
 		},
 	}

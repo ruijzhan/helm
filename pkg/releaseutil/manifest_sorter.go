@@ -121,7 +121,7 @@ func SortManifests(files map[string]string, apis chartutil.VersionSet, ordering 
 //	 apiVersion: v1
 //		metadata:
 //			annotations:
-//				github.com/ruijzhan/hook: pre-install
+//				helm.sh/hook: pre-install
 //
 // To determine the policy to delete the hook, it looks for a YAML structure like this:
 //
@@ -129,7 +129,7 @@ func SortManifests(files map[string]string, apis chartutil.VersionSet, ordering 
 //	 apiVersion: v1
 //	 metadata:
 //			annotations:
-//				github.com/ruijzhan/hook-delete-policy: hook-succeeded
+//				helm.sh/hook-delete-policy: hook-succeeded
 func (file *manifestFile) sort(result *result) error {
 	// Go through manifests in order found in file (function `SplitManifests` creates integer-sortable keys)
 	var sortedEntryKeys []string

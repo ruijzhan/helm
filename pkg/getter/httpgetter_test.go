@@ -292,7 +292,7 @@ func TestDownloadTLS(t *testing.T) {
 		t.Fatal(errors.Wrap(err, "can't create TLS config for client"))
 	}
 	tlsConf.BuildNameToCertificate()
-	tlsConf.ServerName = "github.com/ruijzhan"
+	tlsConf.ServerName = "helm.sh"
 	tlsSrv.TLS = tlsConf
 	tlsSrv.StartTLS()
 	defer tlsSrv.Close()

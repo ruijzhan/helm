@@ -224,12 +224,12 @@ func checkForExpiredRepos(repofile string) {
 		{
 			name: "stable",
 			old:  "kubernetes-charts.storage.googleapis.com",
-			new:  "https://charts.github.com/ruijzhan/stable",
+			new:  "https://charts.helm.sh/stable",
 		},
 		{
 			name: "incubator",
 			old:  "kubernetes-charts-incubator.storage.googleapis.com",
-			new:  "https://charts.github.com/ruijzhan/incubator",
+			new:  "https://charts.helm.sh/incubator",
 		},
 	}
 

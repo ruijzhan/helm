@@ -459,7 +459,7 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "<CHARTNAME>.labels" -}}
-github.com/ruijzhan/chart: {{ include "<CHARTNAME>.chart" . }}
+helm.sh/chart: {{ include "<CHARTNAME>.chart" . }}
 {{ include "<CHARTNAME>.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
@@ -494,7 +494,7 @@ metadata:
   labels:
     {{- include "<CHARTNAME>.labels" . | nindent 4 }}
   annotations:
-    "github.com/ruijzhan/hook": test
+    "helm.sh/hook": test
 spec:
   containers:
     - name: wget

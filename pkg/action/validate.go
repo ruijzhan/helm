@@ -33,8 +33,8 @@ var accessor = meta.NewAccessor()
 const (
 	appManagedByLabel              = "app.kubernetes.io/managed-by"
 	appManagedByHelm               = "Helm"
-	helmReleaseNameAnnotation      = "meta.github.com/ruijzhan/release-name"
-	helmReleaseNamespaceAnnotation = "meta.github.com/ruijzhan/release-namespace"
+	helmReleaseNameAnnotation      = "meta.helm.sh/release-name"
+	helmReleaseNamespaceAnnotation = "meta.helm.sh/release-namespace"
 )
 
 func existingResourceConflict(resources kube.ResourceList, releaseName, releaseNamespace string) (kube.ResourceList, error) {

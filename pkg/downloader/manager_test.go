@@ -52,9 +52,9 @@ func TestNormalizeURL(t *testing.T) {
 	tests := []struct {
 		name, base, path, expect string
 	}{
-		{name: "basic URL", base: "https://example.com", path: "http://github.com/ruijzhan/foo", expect: "http://github.com/ruijzhan/foo"},
-		{name: "relative path", base: "https://github.com/ruijzhan/charts", path: "foo", expect: "https://github.com/ruijzhan/charts/foo"},
-		{name: "Encoded path", base: "https://github.com/ruijzhan/a%2Fb/charts", path: "foo", expect: "https://github.com/ruijzhan/a%2Fb/charts/foo"},
+		{name: "basic URL", base: "https://example.com", path: "http://helm.sh/foo", expect: "http://helm.sh/foo"},
+		{name: "relative path", base: "https://helm.sh/charts", path: "foo", expect: "https://helm.sh/charts/foo"},
+		{name: "Encoded path", base: "https://helm.sh/a%2Fb/charts", path: "foo", expect: "https://helm.sh/a%2Fb/charts/foo"},
 	}
 
 	for _, tt := range tests {
@@ -89,7 +89,7 @@ func TestFindChartURL(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if churl != "https://charts.github.com/ruijzhan/stable/alpine-0.1.0.tgz" {
+	if churl != "https://charts.helm.sh/stable/alpine-0.1.0.tgz" {
 		t.Errorf("Unexpected URL %q", churl)
 	}
 	if username != "" {

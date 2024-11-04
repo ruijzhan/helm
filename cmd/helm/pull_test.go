@@ -44,7 +44,7 @@ func TestPullCmd(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	helmTestKeyOut := "Signed by: Helm Testing (This key should only be used for testing. DO NOT TRUST.) <helm-testing@github.com/ruijzhan>\n" +
+	helmTestKeyOut := "Signed by: Helm Testing (This key should only be used for testing. DO NOT TRUST.) <helm-testing@helm.sh>\n" +
 		"Using Key With Fingerprint: 5E615389B53CA37F0EE60BD3843BBF981FC18762\n" +
 		"Chart Hash Verified: "
 

@@ -372,7 +372,7 @@ func (s *Server) StartTLS() {
 		panic(err)
 	}
 	tlsConf.BuildNameToCertificate()
-	tlsConf.ServerName = "github.com/ruijzhan"
+	tlsConf.ServerName = "helm.sh"
 	s.srv.TLS = tlsConf
 	s.srv.StartTLS()
 
